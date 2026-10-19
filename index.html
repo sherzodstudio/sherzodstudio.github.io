@@ -8,6 +8,7 @@
 :root{font-family:Inter,system-ui,Arial,sans-serif;color:#eef0ff;background:#0a0d17}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:220px 1fr}.sidebar{background:#111625;border-right:1px solid #293047;padding:25px 18px}.logo{font-weight:900;font-size:20px;letter-spacing:.5px}.logo b{color:#9f8aff}.sub{font-size:10px;letter-spacing:3px;color:#929bb6;margin-top:6px}.nav{margin-top:45px}.nav div{padding:13px;border-radius:11px;color:#9ca6c3;margin-bottom:9px}.nav .active{background:#26213e;color:#b5a5ff}.main{padding:25px;min-width:0}.top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:25px}.top h1{font-size:23px;margin:0}.muted{color:#8e99b6;font-size:13px}.tag{padding:8px 12px;border:1px solid #44406d;border-radius:20px;color:#b9aaff;font-size:12px}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:18px}.panel{background:#141a2a;border:1px solid #2b344a;border-radius:17px;padding:17px}.preview{background:#05070e;aspect-ratio:16/9;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}video{width:100%;height:100%;object-fit:contain}.placeholder{text-align:center;color:#9aa4c0}.placeholder .play{font-size:55px;color:#a48aff}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}.btn{background:#252c43;color:#e7eaff;border:1px solid #39435e;border-radius:10px;padding:11px 14px}.primary{background:linear-gradient(110deg,#7958ed,#aa7bff);border:0;color:white;font-weight:700}.right h3,.timeline h3{margin:0 0 13px;font-size:16px}.right p{line-height:1.6}.feature{padding:13px;background:#1b2236;border-radius:12px;margin:10px 0;color:#c4cce1;font-size:13px}.feature span{display:block;color:#a38cff;font-weight:700;margin-bottom:5px}.timeline{margin-top:18px}.ruler{display:flex;justify-content:space-between;color:#8792ae;font-size:11px;margin-bottom:10px}.track{display:flex;align-items:center;gap:12px;margin:9px 0}.track label{width:75px;color:#a5afc9;font-size:12px}.bar{height:35px;border-radius:7px;flex:1;background:repeating-linear-gradient(90deg,#594ac1 0 90px,#7565dd 90px 94px)}.bar.audio{height:24px;background:repeating-linear-gradient(90deg,#207e85 0 70px,#32a4a9 70px 73px)}.trim{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px}.trim label{display:block;font-size:12px;color:#aab3cc;margin-bottom:7px}.trim input{width:100%;background:#0c1120;border:1px solid #39425d;border-radius:8px;padding:10px;color:#fff}.status{color:#b5a7ff;font-size:12px;margin-top:12px;min-height:18px}.foot{font-size:12px;color:#808ca9;margin-top:15px}@media(max-width:1050px){.workspace{grid-template-columns:1fr}.app{grid-template-columns:1fr}.sidebar{display:none}}@media(max-width:600px){.main{padding:14px}.top{align-items:flex-start}.top h1{font-size:19px}.tag{font-size:10px}.trim{grid-template-columns:1fr}}
 [hidden]{display:none!important}.btn:disabled{opacity:.55;cursor:wait}.progress{height:8px;background:#0c1120;border:1px solid #2b344a;border-radius:6px;overflow:hidden;margin-top:14px}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#7958ed,#aa7bff);transition:width .25s}.exp-status{color:#c9bfff;font-size:12px;margin-top:8px;min-height:16px}.exp-status.err{color:#ff8a9b}.result{margin-top:14px;padding:14px;background:#1b2236;border:1px solid #2f3a55;border-radius:12px}.result h4{margin:0 0 10px;font-size:14px;color:#d8d0ff}.result video{display:block;max-height:280px;background:#05070e;border-radius:8px}.result a.btn{display:inline-block;text-decoration:none;margin-top:12px}.result .muted{margin-top:8px}
 .bar.real{position:relative;overflow:hidden;background:#0c1120;border:1px solid #2b344a}.bar.real .seg{position:absolute;top:0;bottom:0;background:#6a57d6;border-right:1px solid #0c1120}.bar.audio.real .seg{background:#2a9aa0}.bar.real .cut{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(135deg,#3a1d2a 0 4px,#24131c 4px 8px)}.bar.real .sel{position:absolute;top:-1px;bottom:-1px;border:2px solid #f3d36b;border-radius:4px;pointer-events:none}.trim select{width:100%;background:#0c1120;border:1px solid #39425d;border-radius:8px;padding:10px;color:#fff;font:inherit}.auto-sum{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.auto-sum div{background:#1b2236;border:1px solid #2f3a55;border-radius:10px;padding:9px 12px;font-size:12px;color:#aab3cc}.auto-sum b{display:block;font-size:16px;color:#eef0ff;margin-top:2px}.badge{display:inline-block;margin-left:6px;padding:2px 7px;border-radius:10px;background:#1d3b2c;color:#7be3a6;font-size:10px;font-weight:700;vertical-align:middle}
+.ai{margin-top:18px;border-color:#4a3d8f;background:linear-gradient(180deg,#1a1936,#141a2a)}.ai-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.ai-head h3{margin:0 0 6px;font-size:18px}.ai-head p{margin:0}.ai-head .btn{white-space:nowrap;flex-shrink:0}.ai textarea{width:100%;background:#0c1120;border:1px solid #39425d;border-radius:8px;padding:10px;color:#fff;font:inherit;resize:vertical}.lbl{display:block;font-size:12px;color:#aab3cc;margin:14px 0 7px}.big{padding:14px 24px;font-size:16px;box-shadow:0 6px 24px rgba(121,88,237,.35)}.steps{display:flex;gap:8px;flex-wrap:wrap;padding:0;margin:14px 0 0;list-style:none;counter-reset:s}.steps li{counter-increment:s;font-size:12px;color:#7f8aa8;background:#11172a;border:1px solid #2b344a;border-radius:20px;padding:6px 11px}.steps li::before{content:counter(s) '. '}.steps li.on{color:#e6dcff;border-color:#7958ed;background:#221d40}.steps li.done{color:#7be3a6;border-color:#2c6b4a}.steps li.done::before{content:'✓ '}.ai-keys{margin-top:12px;padding:14px;background:#11172a;border:1px solid #2b344a;border-radius:12px}.ai-keys .trim{margin-top:0}.variants{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.var{background:#1b2236;border:1px solid #2f3a55;border-radius:14px;padding:15px}.var.b{border-color:#6a57d6;background:linear-gradient(180deg,#221d40,#1b2236)}.vtag{font-size:10px;letter-spacing:2px;color:#a38cff;font-weight:700}.var h4{margin:4px 0;font-size:16px}.var p{font-size:13px;color:#c4cce1;line-height:1.5;margin:6px 0 10px}.stats{display:flex;gap:6px 12px;flex-wrap:wrap;font-size:12px;color:#aab3cc}.stats b{color:#fff}.var .toolbar{margin-top:12px}.var details{margin-top:10px;font-size:12px;color:#aab3cc}.var details ul{padding-left:18px;margin:6px 0 0}.var details li{margin:3px 0}.ai-topic{margin-top:14px;font-size:13px;color:#c9bfff}.ai-capt{margin-top:12px;font-size:13px;color:#c4cce1}.ai-capt summary{cursor:pointer}.capt{background:#11172a;border:1px solid #2b344a;border-radius:10px;padding:10px;margin-top:8px;white-space:pre-wrap}@media(max-width:700px){.variants{grid-template-columns:1fr}.ai-head{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -15,6 +16,7 @@
 <aside class="sidebar"><div class="logo">SHERZOD <b>STUDIO</b></div><div class="sub">AI CREATIVE WORKSPACE</div><div class="nav"><div class="active">✦ Video Editor</div><div>▣ Media Library</div><div>♫ Audio Studio</div><div>▤ Subtitles</div><div>◇ Templates</div><div>⚙ Settings</div></div></aside>
 <main class="main"><header class="top"><div><h1>Premium Video Editor</h1><div class="muted">SHERZOD STUDIO · Birinchi ishchi prototip</div></div><div class="tag">✦ AVTO MONTAJ — BETA</div></header>
 <section class="workspace"><div><div class="panel"><div class="preview" id="preview"><div class="placeholder" id="placeholder"><div class="play">▶</div><div>Montajni boshlash uchun video yuklang</div></div><video id="video" controls playsinline style="display:none"></video></div><div class="toolbar"><input type="file" id="file" accept="video/*" hidden><button class="btn primary" id="upload">＋ Video yuklash</button><button class="btn" id="play">▶ Ko‘rish</button><button class="btn" id="pause">Ⅱ To‘xtatish</button><button class="btn" id="markStart">⟵ Boshlanishni belgilash</button><button class="btn" id="markEnd">⟶ Tugashni belgilash</button></div><div class="status" id="status">Video hali yuklanmagan.</div></div>
+<div class="panel ai" id="aiPanel"><div class="ai-head"><div><h3>✦ AI Montaj <span class="badge">BETA</span></h3><p class="muted">Montajsiz videoni yuklang — AI nutqni tinglaydi, keraksiz joylarni olib tashlaydi va ikki xil tayyor variant beradi.</p></div><button class="btn" id="aiKeysBtn">🔑 Sozlamalar</button></div><div class="ai-keys" id="aiKeys" hidden><div class="trim"><div><label for="aiKeyAnth">Anthropic (Claude) API kaliti</label><input type="password" id="aiKeyAnth" placeholder="sk-ant-..." autocomplete="off"></div><div><label for="aiKeyOpenai">OpenAI API kaliti (nutqni matnga aylantirish)</label><input type="password" id="aiKeyOpenai" placeholder="sk-..." autocomplete="off"></div><div><label for="aiModel">AI modeli</label><select id="aiModel"><option value="claude-sonnet-5-5">Claude Sonnet 5.5 — tez, tejamkor (tavsiya)</option><option value="claude-opus-5-5">Claude Opus 5.5 — eng kuchli</option></select></div><div><label for="aiLang">Video tili</label><select id="aiLang"><option value="">Avtomatik aniqlash</option><option value="uz">O‘zbek</option><option value="ru">Rus</option><option value="en">Ingliz</option></select></div></div><div class="toolbar"><button class="btn primary" id="aiKeysSave">Saqlash</button><button class="btn" id="aiKeysClear">Kalitlarni o‘chirish</button></div><p class="foot">Kalitlar faqat shu qurilmadagi brauzerda saqlanadi va to‘g‘ridan-to‘g‘ri Anthropic va OpenAI ga yuboriladi. Videoning o‘zi hech qayerga yuborilmaydi — faqat ovoz (matnga aylantirish uchun) va matn (AI reja uchun).</p></div><div class="trim"><div><label for="aiTarget">Qayerga</label><select id="aiTarget"><option value="9:16">Instagram Reels / TikTok / Shorts (9:16)</option><option value="16:9">YouTube (16:9)</option><option value="1:1">Kvadrat (1:1)</option><option value="orig">Asl format</option></select></div><div><label for="aiLen">Dinamik variant uzunligi</label><select id="aiLen"><option value="0">Avtomatik</option><option value="30">~30 soniya</option><option value="45" selected>~45 soniya</option><option value="60">~60 soniya</option><option value="90">~90 soniya</option></select></div></div><label for="aiNote" class="lbl">AI uchun qo‘shimcha ko‘rsatma (ixtiyoriy)</label><textarea id="aiNote" rows="2" placeholder="Masalan: shifokorning tavsiyalarini albatta qoldir, reklama qismini olib tashla"></textarea><div class="toolbar"><button class="btn primary big" id="aiRun">✦ AI montaj qilish</button><button class="btn" id="aiCancel" hidden>✕ Bekor qilish</button></div><ol class="steps" id="aiSteps"><li id="aiS1">Ovoz ajratiladi</li><li id="aiS2">Nutq matnga aylantiriladi</li><li id="aiS3">AI montaj rejasini tuzadi</li><li id="aiS4">A va B variantlar tayyor</li></ol><div class="progress" id="aiProgress" hidden><i id="aiBar"></i></div><div class="exp-status" id="aiStatus" aria-live="polite"></div><div id="aiOut" hidden><div class="ai-topic" id="aiTopic"></div><div class="variants" id="aiVariants"></div><details class="ai-capt" id="aiCaptWrap"><summary>✍ Caption takliflari</summary><div id="aiCaptions"></div></details></div><div class="result" id="aiResult" hidden><h4 id="aiResTitle">✓ MP4 tayyor</h4><video id="aiVideo" controls playsinline></video><a class="btn primary" id="aiLink" href="#" download>⬇ Faylni saqlash</a><div class="muted" id="aiInfo"></div></div><div class="foot">“Ko‘rish” natijani asl videoda sakrab ko‘rsatadi; zoom va 9:16 kesish faqat tayyor MP4 da ko‘rinadi. Subtitrlar keyingi qadamda qo‘shiladi.</div></div>
 <div class="panel timeline"><h3>Timeline · Montaj</h3><div class="ruler" id="ruler"><span>00:00</span><span>00:15</span><span>00:30</span><span>00:45</span><span>01:00</span></div><div class="track"><label>VIDEO</label><div class="bar" id="vBar"></div></div><div class="track"><label>AUDIO</label><div class="bar audio" id="aBar"></div></div><div class="trim"><div><label for="start">Boshlanish (soniya)</label><input type="number" id="start" min="0" step="0.1" value="0"></div><div><label for="end">Tugash (soniya)</label><input type="number" id="end" min="0" step="0.1" value="0"></div></div><div class="toolbar"><button class="btn" id="previewTrim">✂ Tanlangan bo‘lakni ko‘rish</button><button class="btn primary" id="exportBtn">⬇ MP4 eksport</button><button class="btn" id="cancelExport" hidden>✕ Bekor qilish</button></div><div class="progress" id="expProgress" hidden><i id="expBar"></i></div><div class="exp-status" id="expStatus" aria-live="polite"></div><div class="result" id="expResult" hidden><h4>✓ MP4 tayyor</h4><video id="resultVideo" controls playsinline></video><a class="btn primary" id="downloadLink" href="#" download>⬇ Faylni saqlash</a><div class="muted" id="resultInfo"></div></div><div class="foot">MP4 eksport brauzerning o‘zida ishlaydi — video hech qayerga yuborilmaydi. Birinchi eksportda montaj dvigateli (~30 MB) bir marta yuklanadi.</div></div>
 <div class="panel timeline" id="autoPanel"><h3>✦ Avto montaj · pauzalarni olib tashlash <span class="badge">ISHLAYDI</span></h3><p class="muted">Dastur ovozdagi jim joylarni topadi va ularni kesib, bir tekis video yig‘adi. Yuqoridagi “Boshlanish–Tugash” oralig‘i ichida ishlaydi (standart: butun video).</p><div class="trim"><div><label for="autoMode">Kesish darajasi</label><select id="autoMode"><option value="0.8">Yumshoq — faqat uzun pauzalar (0.8 s dan)</option><option value="0.5" selected>O‘rta — tavsiya (0.5 s dan)</option><option value="0.35">Kuchli — dinamik Reels (0.35 s dan)</option></select></div><div><label for="autoNoise">Jimlik chegarasi</label><select id="autoNoise"><option value="-40">Juda jim xona (−40 dB)</option><option value="-35" selected>Oddiy (−35 dB)</option><option value="-28">Shovqinli joy (−28 dB)</option></select></div></div><div class="toolbar"><button class="btn primary" id="autoFind">✦ Pauzalarni topish</button><button class="btn" id="autoPreview" disabled>▶ Natijani ko‘rish</button><button class="btn primary" id="autoExport" disabled>⬇ Pauzasiz MP4</button><button class="btn" id="autoCancel" hidden>✕ Bekor qilish</button></div><div class="auto-sum" id="autoSum" hidden></div><div class="progress" id="autoProgress" hidden><i id="autoBar"></i></div><div class="exp-status" id="autoStatus" aria-live="polite"></div><div class="result" id="autoResult" hidden><h4>✓ Pauzasiz MP4 tayyor</h4><video id="autoVideo" controls playsinline></video><a class="btn primary" id="autoLink" href="#" download>⬇ Faylni saqlash</a><div class="muted" id="autoInfo"></div></div><div class="foot">Bu 1-qadam: jimlikni ovoz balandligi bo‘yicha topadi. Gaplarning ma’nosiga qarab kesadigan haqiqiy AI montaj (A/B variantlar) keyingi bosqichda qo‘shiladi.</div></div></div>
 <aside class="panel right"><h3>✦ AI Creative Director</h3><p class="muted">Kelajakda videoni matn orqali montaj qilasiz.</p><div class="feature"><span>AI Smart Cut <i class="badge">ODDIY VERSIYA ISHLAYDI</i></span>Keraksiz pauzalarni avtomatik kesish — chapdagi “Avto montaj” bo‘limida</div><div class="feature"><span>AI Subtitles</span>O‘zbek, rus va inglizcha subtitrlar</div><div class="feature"><span>Long Video → Reels</span>Uzun videodan qisqa roliklar</div><div class="feature"><span>Voice Enhancement</span>Ovozni tozalash va balanslash</div><p class="foot">Pauzalarni kesish ishlaydi. Qolgan AI funksiyalar hozircha maket — navbatma-navbat ishga tushiriladi.</p></aside></section></main></div>
@@ -119,7 +121,7 @@ $('upload').onclick=()=>$('file').click();$('file').onchange=e=>{const f=e.targe
       if(st==='support') say(u,'Bu brauzer montajni qo‘llab-quvvatlamaydi. Chrome yoki Safari’ning yangi versiyasida oching.',true);
       else if(st==='load') say(u,'Montaj dvigatelini yuklab bo‘lmadi. Internetni tekshirib, qayta urinib ko‘ring.',true);
       else if(st==='noaudio') say(u,'Bu videoda ovoz yo‘lagi yo‘q — pauzalarni ovoz bo‘yicha topib bo‘lmaydi.',true);
-      else if(st==='nothing') say(u,text,true);
+      else if(st==='nothing'||st==='api') say(u,text,true);
       else if(/memory|RangeError|allocation|OOM/i.test(text)) say(u,'Qurilma xotirasi yetmadi. Qisqaroq oraliq tanlang yoki kompyuterda urinib ko‘ring.',true);
       else say(u,'Videoni qayta ishlab bo‘lmadi. Fayl formati qo‘llab-quvvatlanmasligi mumkin — boshqa video bilan sinang.',true);
     }finally{ if(my===run) finish() }
@@ -127,16 +129,18 @@ $('upload').onclick=()=>$('file').click();$('file').onchange=e=>{const f=e.targe
 
   /* ---------- haqiqiy timeline ---------- */
   let segs=null, segRange=null;
-  function renderTimeline(){
+  function renderTimeline(list,range){
     const d=video.duration; if(!Number.isFinite(d)||d<=0) return;
+    const L=list||segs, R=range||segRange;
     const r=$('ruler'); r.innerHTML=''; for(let i=0;i<=4;i++){const s=document.createElement('span');s.textContent=fmt(d*i/4).replace(/\.\d$/,'');r.appendChild(s)}
     for(const bar of [$('vBar'),$('aBar')]){
       bar.classList.add('real'); bar.innerHTML='';
       const add=(cls,a,b)=>{const el=document.createElement('div');el.className=cls;el.style.left=(a/d*100)+'%';el.style.width=Math.max(.15,(b-a)/d*100)+'%';bar.appendChild(el)};
-      if(segs&&segRange){
-        add('seg',0,segRange[0]); let cur=segRange[0];
-        for(const [a,b] of segs){ if(a>cur) add('cut',cur,a); add('seg',a,b); cur=b }
-        if(segRange[1]>cur) add('cut',cur,segRange[1]); if(d>segRange[1]) add('seg',segRange[1],d);
+      if(L&&R){
+        const sorted=L.slice().sort((x,y)=>x[0]-y[0]);
+        add('seg',0,R[0]); let cur=R[0];
+        for(const [a,b] of sorted){ if(a>cur) add('cut',cur,a); if(b>cur) add('seg',Math.max(a,cur),b); cur=Math.max(cur,b) }
+        if(R[1]>cur) add('cut',cur,R[1]); if(d>R[1]) add('seg',R[1],d);
       } else add('seg',0,d);
     }
   }
@@ -207,21 +211,26 @@ $('upload').onclick=()=>$('file').click();$('file').onchange=e=>{const f=e.targe
   /* Natijani oldindan ko'rish: kesilgan joylardan sakrab o'tadi */
   let skipRAF=null;
   function stopSkipPreview(){if(skipRAF){cancelAnimationFrame(skipRAF);skipRAF=null}}
-  autoPrev.onclick=async()=>{
-    if(!segs||busy) return; stopSkipPreview(); clearTimer();
-    let i=0; video.currentTime=segs[0][0];
-    try{await video.play()}catch{say(U.auto,'Videoni ijro etib bo‘lmadi.',true);return}
-    say(U.auto,'Pauzasiz variant ijro etilmoqda…');
+  // Bo'laklarni berilgan tartibda ijro etish (tartib almashgan bo'lsa ham ishlaydi)
+  async function playList(list,u,label){
+    if(!list||!list.length||busy) return; stopSkipPreview(); clearTimer();
+    let i=0; video.currentTime=list[0][0];
+    try{await video.play()}catch{say(u,'Videoni ijro etib bo‘lmadi.',true);return}
+    say(u,label||'Natija ijro etilmoqda…');
+    video.scrollIntoView({behavior:'smooth',block:'center'});
     const tick=()=>{
       if(video.paused){stopSkipPreview();return}
       const t=video.currentTime;
-      while(i<segs.length&&t>=segs[i][1]-0.02) i++;
-      if(i>=segs.length){video.pause();stopSkipPreview();say(U.auto,'Ko‘rib chiqildi.');return}
-      if(t<segs[i][0]-0.05) video.currentTime=segs[i][0];
+      if(t>=list[i][1]-0.03||t<list[i][0]-0.25){
+        if(t>=list[i][1]-0.03) i++;
+        if(i>=list.length){video.pause();stopSkipPreview();say(u,'Ko‘rib chiqildi.');return}
+        video.currentTime=list[i][0];
+      }
       skipRAF=requestAnimationFrame(tick);
     };
     skipRAF=requestAnimationFrame(tick);
-  };
+  }
+  autoPrev.onclick=()=>playList(segs,U.auto,'Pauzasiz variant ijro etilmoqda…');
 
   /* Pauzasiz MP4: har bir bo'lak alohida kirish sifatida ochiladi va concat bilan ulanadi
      (xotira tejamkor, ovoz-tasvir sinxron) */
@@ -247,6 +256,207 @@ $('upload').onclick=()=>$('file').click();$('file').onchange=e=>{const f=e.targe
   window.ssOnNewFile=()=>{ if(busy) return; segs=null; segRange=null; autoSum.hidden=true; refreshAutoButtons(); stopSkipPreview();
     for(const u of [U.exp,U.auto]){clearResult(u);u.wrap.hidden=true;say(u,'')} };
   window.ssOnMeta=()=>renderTimeline();
+
+  // AI moduli uchun umumiy dvigatel interfeysi
+  window.SS={job,exec,progress,say,clearResult,showResult,err,ENC,EVEN,fmt,mb,playList,renderTimeline,
+    isBusy:()=>busy, setAutoSegs:(l,r)=>{segs=l;segRange=r;refreshAutoButtons()}};
+})();
+</script>
+<script>
+/* ===== AI MONTAJ (A/B variantlar) =====
+   1) ffmpeg.wasm videodan faqat ovozni ajratadi (m4a, kichik hajm)
+   2) OpenAI whisper-1 nutqni so'z-so'z vaqt belgilari bilan matnga aylantiradi
+   3) Claude iboralar ro'yxatidan ikki xil montaj rejasini (JSON) tuzadi — matn o'ylab topilmaydi, faqat iboralar tanlanadi
+   4) Kesish chegaralarini kod aniq hisoblaydi, render ffmpeg.wasm'da (video qurilmadan chiqmaydi) */
+(()=>{
+  const S=window.SS;
+  const OPENAI=(window.SS_OPENAI_URL||'https://api.openai.com').replace(/\/$/,'');
+  const ANTH=(window.SS_ANTHROPIC_URL||'https://api.anthropic.com').replace(/\/$/,'');
+  const store={get:k=>{try{return localStorage.getItem('ss_'+k)||''}catch{return ''}},set:(k,v)=>{try{v?localStorage.setItem('ss_'+k,v):localStorage.removeItem('ss_'+k)}catch{}}};
+  const u={wrap:$('aiProgress'),bar:$('aiBar'),msg:$('aiStatus'),result:$('aiResult'),video:$('aiVideo'),link:$('aiLink'),info:$('aiInfo'),url:null};
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  /* ---------- sozlamalar ---------- */
+  const F={anth:$('aiKeyAnth'),oai:$('aiKeyOpenai'),model:$('aiModel'),lang:$('aiLang')};
+  function loadKeys(){F.anth.value=store.get('anth');F.oai.value=store.get('oai');F.model.value=store.get('model')||F.model.value;F.lang.value=store.get('lang');keyBadge()}
+  function keyBadge(){$('aiKeysBtn').textContent=(store.get('anth')&&store.get('oai'))?'🔑 Sozlamalar ✓':'🔑 API kalitlarni kiriting'}
+  $('aiKeysBtn').onclick=()=>{$('aiKeys').hidden=!$('aiKeys').hidden};
+  $('aiKeysSave').onclick=()=>{store.set('anth',F.anth.value.trim());store.set('oai',F.oai.value.trim());store.set('model',F.model.value);store.set('lang',F.lang.value);keyBadge();$('aiKeys').hidden=true;S.say(u,'Sozlamalar saqlandi.')};
+  $('aiKeysClear').onclick=()=>{for(const k of ['anth','oai'])store.set(k,'');F.anth.value='';F.oai.value='';keyBadge();S.say(u,'Kalitlar bu qurilmadan o‘chirildi.')};
+  loadKeys();
+
+  const steps=[1,2,3,4].map(i=>$('aiS'+i));
+  const step=(n)=>steps.forEach((el,i)=>{el.classList.toggle('done',i<n-1);el.classList.toggle('on',i===n-1)});
+  const stepsDone=()=>steps.forEach(el=>{el.classList.remove('on');el.classList.add('done')});
+  const stepsReset=()=>steps.forEach(el=>el.classList.remove('on','done'));
+
+  /* ---------- 1) nutqdan iboralar ---------- */
+  function buildPhrases(words){
+    const P=[];let cur=null;
+    for(const w of words){
+      const gap=cur?w.start-cur.end:0;
+      if(!cur||gap>=0.45||/[.?!…]$/.test(cur.text)||cur.n>=14){cur={start:w.start,end:w.end,text:w.word.trim(),n:1};P.push(cur)}
+      else{cur.end=w.end;cur.text+=' '+w.word.trim();cur.n++}
+    }
+    return P.map((p,i)=>({i,start:p.start,end:p.end,text:p.text}));
+  }
+
+  /* ---------- 2) API chaqiruvlari ---------- */
+  async function apiError(res,who){
+    let detail='';try{const j=await res.json();detail=(j.error&&(j.error.message||j.error.type))||''}catch{}
+    if(res.status===401) return S.err('api',who+' API kaliti noto‘g‘ri yoki o‘chirilgan. “🔑 Sozlamalar”da tekshiring.');
+    if(res.status===429) return S.err('api',who+' limiti tugadi yoki hisobda mablag‘ yo‘q (429). Hisobingizni tekshiring yoki birozdan keyin urinib ko‘ring.');
+    if(res.status===413) return S.err('api','Ovoz fayli juda katta. Qisqaroq oraliq tanlang.');
+    return S.err('api',who+' xatosi ('+res.status+'): '+detail);
+  }
+  async function transcribe(blob,lang){
+    const fd=new FormData();
+    fd.append('file',blob,'audio.m4a');fd.append('model','whisper-1');fd.append('response_format','verbose_json');
+    fd.append('timestamp_granularities[]','word');fd.append('timestamp_granularities[]','segment');
+    if(lang) fd.append('language',lang);
+    let res;try{res=await fetch(OPENAI+'/v1/audio/transcriptions',{method:'POST',headers:{Authorization:'Bearer '+store.get('oai')},body:fd})}
+    catch{throw S.err('api','OpenAI’ga ulanib bo‘lmadi. Internetni tekshiring.')}
+    if(!res.ok) throw await apiError(res,'OpenAI');
+    return res.json();
+  }
+  const PLAN_TOOL={name:'montaj_rejasi',description:'Video uchun ikkita montaj variantini qaytaradi.',input_schema:{type:'object',required:['topic','variants','captions'],properties:{
+    topic:{type:'string',description:'Video mavzusi, 1 qisqa jumla, o‘zbek tilida (lotin).'},
+    variants:{type:'array',minItems:2,maxItems:2,items:{type:'object',required:['id','title','description','clips'],properties:{
+      id:{type:'string',enum:['A','B']},
+      title:{type:'string',description:'Variant nomi, 2-4 so‘z, o‘zbekcha.'},
+      description:{type:'string',description:'Bu variantda nima qilingani, 1-2 jumla, o‘zbekcha.'},
+      clips:{type:'array',minItems:1,description:'Ijro tartibidagi bo‘laklar. Har biri iboralar oralig‘i [from..to], ikkalasi ham kiradi.',items:{type:'object',required:['from','to'],properties:{
+        from:{type:'integer'},to:{type:'integer'},zoom:{type:'boolean',description:'Faqat B: urg‘u uchun yaqinlashtirish.'},why:{type:'string',description:'Qisqa izoh, o‘zbekcha.'}}}}}}},
+    captions:{type:'array',minItems:3,maxItems:3,items:{type:'string'},description:'Ijtimoiy tarmoq uchun 3 ta caption varianti, o‘zbekcha, mos heshteglar bilan.'}}}};
+  const SYSTEM=`Sen professional video montajchisan. Senga videodagi nutq raqamlangan iboralar ro‘yxati sifatida beriladi (index | vaqt | matn). Vazifang — ikkita haqiqatan farq qiladigan montaj rejasini tuzish va faqat "montaj_rejasi" vositasi orqali javob berish.
+
+QOIDALAR:
+- Faqat berilgan iboralar indekslaridan foydalan. Hech qachon matn o‘ylab topma, o‘zgartirma.
+- Gapni o‘rtasidan kesma: fikr to‘liq qolishi kerak.
+- Takrorlar, chalkash boshlanishlar ("aaa", "ee", qayta aytilgan gaplar), mavzudan tashqari gaplar va kamera oldidagi texnik gaplarni ("yozyaptimi?", "qaytadan olamiz") olib tashla.
+
+VARIANT A — "Professional toza montaj": asl tartib saqlanadi (clips o‘sish tartibida, ustma-ust tushmaydi), faqat keraksiz joylar olib tashlanadi, zoom yo‘q. Ma’no to‘liq saqlansin.
+
+VARIANT B — "Dinamik Reels": eng kuchli, qiziqtiradigan ibora birinchi bo‘lsin (hook, videoning o‘rtasidan olinishi mumkin), keyin qolgan fikr mantiqiy tartibda. Ixchamroq: kuchsiz qismlarni olib tashlab, maqsadli davomiylikka moslashtir. Har 2-3 bo‘lakdan birida zoom:true qo‘y. Bir ibora B ichida ikki marta ishlatilmasin.
+
+Barcha matnlar (title, description, why, topic, captions) o‘zbek tilida, lotin yozuvida.`;
+  async function plan(P,duration,opts){
+    const lines=P.map(p=>p.i+' | '+p.start.toFixed(2)+'–'+p.end.toFixed(2)+' | '+p.text).join('\n');
+    const target=opts.len>0?('~'+opts.len+' soniya'):'avtomatik (asl uzunlikning taxminan 40–60%, 60 soniyadan oshmasin)';
+    const content='Video davomiyligi: '+duration.toFixed(1)+' s.\nMaqsad platforma: '+opts.targetLabel+'.\nB variant uchun maqsadli davomiylik: '+target+'.\n'+(opts.note?'Foydalanuvchi ko‘rsatmasi: '+opts.note+'\n':'')+'\nIboralar (index | boshlanish–tugash s | matn):\n'+lines;
+    let res;
+    try{res=await fetch(ANTH+'/v1/messages',{method:'POST',headers:{'content-type':'application/json','x-api-key':store.get('anth'),'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model:store.get('model')||'claude-sonnet-5-5',max_tokens:8000,system:SYSTEM,tools:[PLAN_TOOL],tool_choice:{type:'tool',name:'montaj_rejasi'},messages:[{role:'user',content}]})})}
+    catch{throw S.err('api','Anthropic’ga ulanib bo‘lmadi. Internetni tekshiring.')}
+    if(!res.ok) throw await apiError(res,'Claude');
+    const j=await res.json(); const t=(j.content||[]).find(c=>c.type==='tool_use');
+    if(!t||!t.input||!Array.isArray(t.input.variants)) throw S.err('api','AI reja qaytarmadi. Qayta urinib ko‘ring.');
+    return {...t.input,usage:j.usage};
+  }
+
+  /* ---------- 3) reja → aniq kesish nuqtalari ---------- */
+  function clipsToSegs(clips,P,a,b,ordered){
+    const n=P.length, cl=x=>Math.max(0,Math.min(n-1,x|0)); let cs=(clips||[]).map(c=>({from:cl(Math.min(c.from,c.to)),to:cl(Math.max(c.from,c.to)),zoom:!!c.zoom}));
+    if(ordered) cs.sort((x,y)=>x.from-y.from);
+    const used=new Set(), out=[];
+    for(const c of cs){
+      let run=null;
+      for(let i=c.from;i<=c.to;i++){
+        if(used.has(i)){run=null;continue} used.add(i);
+        const prevEnd=i>0?P[i-1].end:a, nextStart=i<n-1?P[i+1].start:b;
+        const s=Math.max(a,(prevEnd+P[i].start)/2,P[i].start-0.12), e=Math.min(b,(P[i].end+nextStart)/2,P[i].end+0.2);
+        if(run&&i===run.last+1&&P[i].start-P[i-1].end<=0.7){run.e=e;run.last=i}
+        else{run={s,e,last:i,zoom:c.zoom};out.push(run)}
+      }
+    }
+    return out.filter(x=>x.e-x.s>=0.25).map(x=>({s:x.s,e:x.e,zoom:x.zoom}));
+  }
+
+  /* ---------- 4) natija kartochkalari ---------- */
+  let last=null; // {P, variants:[{id,title,description,segs,removed}], a, b, aspect}
+  function renderOut(){
+    const out=$('aiOut'); out.hidden=false;
+    $('aiTopic').innerHTML='<b>Mavzu:</b> '+esc(last.topic||'—');
+    $('aiVariants').innerHTML=last.variants.map((v,k)=>{
+      const dur=v.segs.reduce((s,x)=>s+x.e-x.s,0), zooms=v.segs.filter(x=>x.zoom).length;
+      return '<div class="var '+(v.id==='B'?'b':'')+'"><div class="vtag">VARIANT '+esc(v.id)+'</div><h4>'+esc(v.title)+'</h4><p>'+esc(v.description)+'</p>'+
+        '<div class="stats"><span>Davomiylik <b>'+S.fmt(dur)+'</b></span><span>Bo‘laklar <b>'+v.segs.length+'</b></span><span>Olib tashlandi <b>'+v.removed.length+' ibora</b></span>'+(zooms?'<span>Zoom <b>'+zooms+'</b></span>':'')+'</div>'+
+        '<div class="toolbar"><button class="btn" data-play="'+k+'">▶ Ko‘rish</button><button class="btn primary" data-render="'+k+'">⬇ MP4 tayyorlash</button></div>'+
+        (v.removed.length?'<details><summary>Nima olib tashlandi ('+v.removed.length+')</summary><ul>'+v.removed.map(p=>'<li><s>'+esc(p.text)+'</s> <span class="muted">'+S.fmt(p.start)+'</span></li>').join('')+'</ul></details>':'')+'</div>';
+    }).join('');
+    $('aiCaptions').innerHTML=(last.captions||[]).map(c=>'<div class="capt">'+esc(c)+'</div>').join('')||'<div class="muted">—</div>';
+    $('aiCaptWrap').hidden=!(last.captions&&last.captions.length);
+    $('aiVariants').querySelectorAll('[data-play]').forEach(btn=>btn.onclick=()=>{const v=last.variants[+btn.dataset.play];
+      S.renderTimeline(v.segs.map(x=>[x.s,x.e]),[last.a,last.b]);S.playList(v.segs.map(x=>[x.s,x.e]),u,'Variant '+v.id+' ijro etilmoqda… (zoom faqat MP4 da ko‘rinadi)')});
+    $('aiVariants').querySelectorAll('[data-render]').forEach(btn=>btn.onclick=()=>renderVariant(+btn.dataset.render));
+  }
+  const ASPECT={'9:16':"crop=w='min(iw,ih*9/16)':h='min(ih,iw*16/9)',",'16:9':"crop=w='min(iw,ih*16/9)':h='min(ih,iw*9/16)',",'1:1':"crop=w='min(iw,ih)':h='min(iw,ih)',",'orig':''};
+  async function renderVariant(k){
+    const v=last.variants[k]; if(!v||!v.segs.length) return;
+    const total=v.segs.reduce((s,x)=>s+x.e-x.s,0);
+    S.clearResult(u);
+    await S.job(u,allBtns(),$('aiCancel'),async(f,name,cancelled)=>{
+      S.progress(u,20,'Variant '+v.id+' MP4 tayyorlanmoqda… 0%');
+      const args=[];let fc='',cat='';
+      const W=video.videoWidth, H=video.videoHeight; // barcha bo'laklar bir xil o'lchamda bo'lishi shart (concat)
+      v.segs.forEach((x,i)=>{args.push('-ss',x.s.toFixed(3),'-t',(x.e-x.s).toFixed(3),'-i',name);
+        const zoom=(x.zoom&&W&&H)?'crop=trunc(iw/1.15/2)*2:trunc(ih/1.15/2)*2,scale='+W+':'+H+',':'';
+        fc+='['+i+':v:0]'+zoom+'setsar=1[v'+i+'];';cat+='[v'+i+']['+i+':a:0]'});
+      fc+=cat+'concat=n='+v.segs.length+':v=1:a=1[vc][ac];[vc]'+ASPECT[last.aspect]+S.EVEN+',format=yuv420p[vo]';
+      const code=await S.exec(f,[...args,'-filter_complex',fc,'-map','[vo]','-map','[ac]',...S.ENC,'-y','ai.mp4'],{dur:total,label:'Variant '+v.id+' MP4 tayyorlanmoqda…'});
+      if(code!==0) throw S.err('exec','ffmpeg exit '+code);
+      const data=await f.readFile('ai.mp4');try{await f.deleteFile('ai.mp4')}catch{}
+      if(cancelled()) return; if(!data||!data.length) throw S.err('exec','empty');
+      $('aiResTitle').textContent='✓ Variant '+v.id+' — '+v.title;
+      S.showResult(u,data,'sherzod-studio_AI-'+v.id+'.mp4',total.toFixed(1)+' soniya · '+v.segs.length+' bo‘lak');
+      u.result.scrollIntoView({behavior:'smooth',block:'nearest'});
+    });
+  }
+  const allBtns=()=>[$('aiRun'),$('exportBtn'),$('autoFind'),$('autoExport'),...$('aiVariants').querySelectorAll('button')];
+
+  /* ---------- asosiy tugma ---------- */
+  $('aiRun').onclick=async()=>{
+    if(!store.get('anth')||!store.get('oai')){$('aiKeys').hidden=false;S.say(u,'Avval Anthropic va OpenAI API kalitlarini kiriting va “Saqlash”ni bosing.',true);return}
+    const range=valid(); if(!range) return; const [a,b]=range, d=b-a;
+    if(d>20*60){S.say(u,'Bu versiya 20 daqiqagacha bo‘lgan oraliqni qayta ishlaydi. Boshlanish–Tugash bilan qisqaroq oraliq tanlang.',true);return}
+    const t=$('aiTarget');
+    const opts={aspect:t.value,targetLabel:t.options[t.selectedIndex].text,len:+$('aiLen').value,note:$('aiNote').value.trim()};
+    S.clearResult(u); $('aiOut').hidden=true; stepsReset();
+    await S.job(u,allBtns(),$('aiCancel'),async(f,name,cancelled)=>{
+      step(1); S.progress(u,20,'1/4 · Ovoz ajratilmoqda… 0%');
+      const lines=[];
+      const code=await S.exec(f,['-ss',a.toFixed(3),'-t',d.toFixed(3),'-i',name,'-vn','-ac','1','-ar','16000','-c:a','aac','-b:a','32k','-y','audio.m4a'],{dur:d,base:20,span:15,label:'1/4 · Ovoz ajratilmoqda…',collect:lines});
+      if(cancelled()) return;
+      if(!lines.some(l=>/Stream #\d+:\d+.*Audio/.test(l))) throw S.err('noaudio');
+      if(code!==0) throw S.err('exec','ffmpeg exit '+code);
+      const audio=await f.readFile('audio.m4a');try{await f.deleteFile('audio.m4a')}catch{}
+      if(audio.length>24*1048576) throw S.err('api','Ovoz fayli 25 MB dan katta. Qisqaroq oraliq tanlang.');
+
+      step(2); S.progress(u,40,'2/4 · Nutq matnga aylantirilmoqda… (bir necha soniya – 1 daqiqa)');
+      const tr=await transcribe(new Blob([audio],{type:'audio/mp4'}),store.get('lang'));
+      if(cancelled()) return;
+      const words=(tr.words||[]).filter(w=>w&&Number.isFinite(w.start)&&Number.isFinite(w.end)).map(w=>({word:String(w.word),start:w.start+a,end:w.end+a}));
+      if(words.length<3) throw S.err('api','Videoda tushunarli nutq topilmadi. AI montaj gapirilgan videolar uchun ishlaydi; musiqali video uchun “Avto montaj”dan foydalaning.');
+      const P=buildPhrases(words);
+
+      step(3); S.progress(u,65,'3/4 · AI montaj rejasini tuzmoqda… ('+P.length+' ibora)');
+      const r=await plan(P,d,opts);
+      if(cancelled()) return;
+      const variants=['A','B'].map(id=>{
+        const v=r.variants.find(x=>x.id===id)||r.variants[id==='A'?0:1]||{clips:[]};
+        const segs=clipsToSegs(v.clips,P,a,b,id==='A');
+        const keep=new Set();(v.clips||[]).forEach(c=>{for(let i=Math.min(c.from,c.to);i<=Math.max(c.from,c.to);i++)keep.add(i)});
+        return {id,title:v.title||('Variant '+id),description:v.description||'',segs,removed:P.filter(p=>!keep.has(p.i))};
+      }).filter(v=>v.segs.length);
+      if(!variants.length) throw S.err('api','AI bo‘sh reja qaytardi. Qayta urinib ko‘ring.');
+      last={P,variants,a,b,aspect:opts.aspect,topic:r.topic,captions:r.captions};
+      step(4); stepsDone(); renderOut();
+      S.renderTimeline(variants[0].segs.map(x=>[x.s,x.e]),[a,b]);
+      const tok=r.usage?(' · AI: '+(r.usage.input_tokens+r.usage.output_tokens)+' token'):'';
+      S.progress(u,100,'Tayyor! Ikkala variantni “▶ Ko‘rish” bilan solishtiring va yoqqanini “⬇ MP4 tayyorlash” bilan oling.'+tok);
+      window.ssLastAI=last; // test uchun
+    });
+  };
 })();
 </script>
 </body>
