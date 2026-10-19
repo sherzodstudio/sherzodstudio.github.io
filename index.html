@@ -7,133 +7,246 @@
 <style>
 :root{font-family:Inter,system-ui,Arial,sans-serif;color:#eef0ff;background:#0a0d17}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:220px 1fr}.sidebar{background:#111625;border-right:1px solid #293047;padding:25px 18px}.logo{font-weight:900;font-size:20px;letter-spacing:.5px}.logo b{color:#9f8aff}.sub{font-size:10px;letter-spacing:3px;color:#929bb6;margin-top:6px}.nav{margin-top:45px}.nav div{padding:13px;border-radius:11px;color:#9ca6c3;margin-bottom:9px}.nav .active{background:#26213e;color:#b5a5ff}.main{padding:25px;min-width:0}.top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:25px}.top h1{font-size:23px;margin:0}.muted{color:#8e99b6;font-size:13px}.tag{padding:8px 12px;border:1px solid #44406d;border-radius:20px;color:#b9aaff;font-size:12px}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:18px}.panel{background:#141a2a;border:1px solid #2b344a;border-radius:17px;padding:17px}.preview{background:#05070e;aspect-ratio:16/9;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}video{width:100%;height:100%;object-fit:contain}.placeholder{text-align:center;color:#9aa4c0}.placeholder .play{font-size:55px;color:#a48aff}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;align-items:center}.btn{background:#252c43;color:#e7eaff;border:1px solid #39435e;border-radius:10px;padding:11px 14px}.primary{background:linear-gradient(110deg,#7958ed,#aa7bff);border:0;color:white;font-weight:700}.right h3,.timeline h3{margin:0 0 13px;font-size:16px}.right p{line-height:1.6}.feature{padding:13px;background:#1b2236;border-radius:12px;margin:10px 0;color:#c4cce1;font-size:13px}.feature span{display:block;color:#a38cff;font-weight:700;margin-bottom:5px}.timeline{margin-top:18px}.ruler{display:flex;justify-content:space-between;color:#8792ae;font-size:11px;margin-bottom:10px}.track{display:flex;align-items:center;gap:12px;margin:9px 0}.track label{width:75px;color:#a5afc9;font-size:12px}.bar{height:35px;border-radius:7px;flex:1;background:repeating-linear-gradient(90deg,#594ac1 0 90px,#7565dd 90px 94px)}.bar.audio{height:24px;background:repeating-linear-gradient(90deg,#207e85 0 70px,#32a4a9 70px 73px)}.trim{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px}.trim label{display:block;font-size:12px;color:#aab3cc;margin-bottom:7px}.trim input{width:100%;background:#0c1120;border:1px solid #39425d;border-radius:8px;padding:10px;color:#fff}.status{color:#b5a7ff;font-size:12px;margin-top:12px;min-height:18px}.foot{font-size:12px;color:#808ca9;margin-top:15px}@media(max-width:1050px){.workspace{grid-template-columns:1fr}.app{grid-template-columns:1fr}.sidebar{display:none}}@media(max-width:600px){.main{padding:14px}.top{align-items:flex-start}.top h1{font-size:19px}.tag{font-size:10px}.trim{grid-template-columns:1fr}}
 [hidden]{display:none!important}.btn:disabled{opacity:.55;cursor:wait}.progress{height:8px;background:#0c1120;border:1px solid #2b344a;border-radius:6px;overflow:hidden;margin-top:14px}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#7958ed,#aa7bff);transition:width .25s}.exp-status{color:#c9bfff;font-size:12px;margin-top:8px;min-height:16px}.exp-status.err{color:#ff8a9b}.result{margin-top:14px;padding:14px;background:#1b2236;border:1px solid #2f3a55;border-radius:12px}.result h4{margin:0 0 10px;font-size:14px;color:#d8d0ff}.result video{display:block;max-height:280px;background:#05070e;border-radius:8px}.result a.btn{display:inline-block;text-decoration:none;margin-top:12px}.result .muted{margin-top:8px}
+.bar.real{position:relative;overflow:hidden;background:#0c1120;border:1px solid #2b344a}.bar.real .seg{position:absolute;top:0;bottom:0;background:#6a57d6;border-right:1px solid #0c1120}.bar.audio.real .seg{background:#2a9aa0}.bar.real .cut{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(135deg,#3a1d2a 0 4px,#24131c 4px 8px)}.bar.real .sel{position:absolute;top:-1px;bottom:-1px;border:2px solid #f3d36b;border-radius:4px;pointer-events:none}.trim select{width:100%;background:#0c1120;border:1px solid #39425d;border-radius:8px;padding:10px;color:#fff;font:inherit}.auto-sum{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.auto-sum div{background:#1b2236;border:1px solid #2f3a55;border-radius:10px;padding:9px 12px;font-size:12px;color:#aab3cc}.auto-sum b{display:block;font-size:16px;color:#eef0ff;margin-top:2px}.badge{display:inline-block;margin-left:6px;padding:2px 7px;border-radius:10px;background:#1d3b2c;color:#7be3a6;font-size:10px;font-weight:700;vertical-align:middle}
 </style>
 </head>
 <body>
 <div class="app">
 <aside class="sidebar"><div class="logo">SHERZOD <b>STUDIO</b></div><div class="sub">AI CREATIVE WORKSPACE</div><div class="nav"><div class="active">✦ Video Editor</div><div>▣ Media Library</div><div>♫ Audio Studio</div><div>▤ Subtitles</div><div>◇ Templates</div><div>⚙ Settings</div></div></aside>
-<main class="main"><header class="top"><div><h1>Premium Video Editor</h1><div class="muted">SHERZOD STUDIO · Birinchi ishchi prototip</div></div><div class="tag">✦ AI FEATURES — COMING SOON</div></header>
+<main class="main"><header class="top"><div><h1>Premium Video Editor</h1><div class="muted">SHERZOD STUDIO · Birinchi ishchi prototip</div></div><div class="tag">✦ AVTO MONTAJ — BETA</div></header>
 <section class="workspace"><div><div class="panel"><div class="preview" id="preview"><div class="placeholder" id="placeholder"><div class="play">▶</div><div>Montajni boshlash uchun video yuklang</div></div><video id="video" controls playsinline style="display:none"></video></div><div class="toolbar"><input type="file" id="file" accept="video/*" hidden><button class="btn primary" id="upload">＋ Video yuklash</button><button class="btn" id="play">▶ Ko‘rish</button><button class="btn" id="pause">Ⅱ To‘xtatish</button><button class="btn" id="markStart">⟵ Boshlanishni belgilash</button><button class="btn" id="markEnd">⟶ Tugashni belgilash</button></div><div class="status" id="status">Video hali yuklanmagan.</div></div>
-<div class="panel timeline"><h3>Timeline · Montaj</h3><div class="ruler"><span>00:00</span><span>00:15</span><span>00:30</span><span>00:45</span><span>01:00</span></div><div class="track"><label>VIDEO</label><div class="bar"></div></div><div class="track"><label>AUDIO</label><div class="bar audio"></div></div><div class="trim"><div><label for="start">Boshlanish (soniya)</label><input type="number" id="start" min="0" step="0.1" value="0"></div><div><label for="end">Tugash (soniya)</label><input type="number" id="end" min="0" step="0.1" value="0"></div></div><div class="toolbar"><button class="btn" id="previewTrim">✂ Tanlangan bo‘lakni ko‘rish</button><button class="btn primary" id="exportBtn">⬇ MP4 eksport</button><button class="btn" id="cancelExport" hidden>✕ Bekor qilish</button></div><div class="progress" id="expProgress" hidden><i id="expBar"></i></div><div class="exp-status" id="expStatus" aria-live="polite"></div><div class="result" id="expResult" hidden><h4>✓ MP4 tayyor</h4><video id="resultVideo" controls playsinline></video><a class="btn primary" id="downloadLink" href="#" download>⬇ Faylni saqlash</a><div class="muted" id="resultInfo"></div></div><div class="foot">MP4 eksport brauzerning o‘zida ishlaydi — video hech qayerga yuborilmaydi. Birinchi eksportda montaj dvigateli (~30 MB) bir marta yuklanadi.</div></div></div>
-<aside class="panel right"><h3>✦ AI Creative Director</h3><p class="muted">Kelajakda videoni matn orqali montaj qilasiz.</p><div class="feature"><span>AI Smart Cut</span>Keraksiz pauzalarni avtomatik kesish</div><div class="feature"><span>AI Subtitles</span>O‘zbek, rus va inglizcha subtitrlar</div><div class="feature"><span>Long Video → Reels</span>Uzun videodan qisqa roliklar</div><div class="feature"><span>Voice Enhancement</span>Ovozni tozalash va balanslash</div><p class="foot">Ushbu AI funksiyalar hozircha maket; hali ishga tushirilmagan.</p></aside></section></main></div>
+<div class="panel timeline"><h3>Timeline · Montaj</h3><div class="ruler" id="ruler"><span>00:00</span><span>00:15</span><span>00:30</span><span>00:45</span><span>01:00</span></div><div class="track"><label>VIDEO</label><div class="bar" id="vBar"></div></div><div class="track"><label>AUDIO</label><div class="bar audio" id="aBar"></div></div><div class="trim"><div><label for="start">Boshlanish (soniya)</label><input type="number" id="start" min="0" step="0.1" value="0"></div><div><label for="end">Tugash (soniya)</label><input type="number" id="end" min="0" step="0.1" value="0"></div></div><div class="toolbar"><button class="btn" id="previewTrim">✂ Tanlangan bo‘lakni ko‘rish</button><button class="btn primary" id="exportBtn">⬇ MP4 eksport</button><button class="btn" id="cancelExport" hidden>✕ Bekor qilish</button></div><div class="progress" id="expProgress" hidden><i id="expBar"></i></div><div class="exp-status" id="expStatus" aria-live="polite"></div><div class="result" id="expResult" hidden><h4>✓ MP4 tayyor</h4><video id="resultVideo" controls playsinline></video><a class="btn primary" id="downloadLink" href="#" download>⬇ Faylni saqlash</a><div class="muted" id="resultInfo"></div></div><div class="foot">MP4 eksport brauzerning o‘zida ishlaydi — video hech qayerga yuborilmaydi. Birinchi eksportda montaj dvigateli (~30 MB) bir marta yuklanadi.</div></div>
+<div class="panel timeline" id="autoPanel"><h3>✦ Avto montaj · pauzalarni olib tashlash <span class="badge">ISHLAYDI</span></h3><p class="muted">Dastur ovozdagi jim joylarni topadi va ularni kesib, bir tekis video yig‘adi. Yuqoridagi “Boshlanish–Tugash” oralig‘i ichida ishlaydi (standart: butun video).</p><div class="trim"><div><label for="autoMode">Kesish darajasi</label><select id="autoMode"><option value="0.8">Yumshoq — faqat uzun pauzalar (0.8 s dan)</option><option value="0.5" selected>O‘rta — tavsiya (0.5 s dan)</option><option value="0.35">Kuchli — dinamik Reels (0.35 s dan)</option></select></div><div><label for="autoNoise">Jimlik chegarasi</label><select id="autoNoise"><option value="-40">Juda jim xona (−40 dB)</option><option value="-35" selected>Oddiy (−35 dB)</option><option value="-28">Shovqinli joy (−28 dB)</option></select></div></div><div class="toolbar"><button class="btn primary" id="autoFind">✦ Pauzalarni topish</button><button class="btn" id="autoPreview" disabled>▶ Natijani ko‘rish</button><button class="btn primary" id="autoExport" disabled>⬇ Pauzasiz MP4</button><button class="btn" id="autoCancel" hidden>✕ Bekor qilish</button></div><div class="auto-sum" id="autoSum" hidden></div><div class="progress" id="autoProgress" hidden><i id="autoBar"></i></div><div class="exp-status" id="autoStatus" aria-live="polite"></div><div class="result" id="autoResult" hidden><h4>✓ Pauzasiz MP4 tayyor</h4><video id="autoVideo" controls playsinline></video><a class="btn primary" id="autoLink" href="#" download>⬇ Faylni saqlash</a><div class="muted" id="autoInfo"></div></div><div class="foot">Bu 1-qadam: jimlikni ovoz balandligi bo‘yicha topadi. Gaplarning ma’nosiga qarab kesadigan haqiqiy AI montaj (A/B variantlar) keyingi bosqichda qo‘shiladi.</div></div></div>
+<aside class="panel right"><h3>✦ AI Creative Director</h3><p class="muted">Kelajakda videoni matn orqali montaj qilasiz.</p><div class="feature"><span>AI Smart Cut <i class="badge">ODDIY VERSIYA ISHLAYDI</i></span>Keraksiz pauzalarni avtomatik kesish — chapdagi “Avto montaj” bo‘limida</div><div class="feature"><span>AI Subtitles</span>O‘zbek, rus va inglizcha subtitrlar</div><div class="feature"><span>Long Video → Reels</span>Uzun videodan qisqa roliklar</div><div class="feature"><span>Voice Enhancement</span>Ovozni tozalash va balanslash</div><p class="foot">Pauzalarni kesish ishlaydi. Qolgan AI funksiyalar hozircha maket — navbatma-navbat ishga tushiriladi.</p></aside></section></main></div>
 <script>
 const $=id=>document.getElementById(id);const video=$('video');let objectUrl=null,trimTimer=null;function status(s){$('status').textContent=s}function clearTimer(){if(trimTimer){clearInterval(trimTimer);trimTimer=null}}function valid(){if(!video.src){status('Avval video yuklang.');return null}const a=Number($('start').value),b=Number($('end').value);if(!Number.isFinite(a)||!Number.isFinite(b)||a<0||b<=a||b>video.duration+.01){status('Vaqtlarni tekshiring: 0 ≤ boshlanish < tugash ≤ video davomiyligi.');return null}return [a,b]}
-$('upload').onclick=()=>$('file').click();$('file').onchange=e=>{const f=e.target.files[0];if(!f)return;clearTimer();video.pause();if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=URL.createObjectURL(f);window.ssCurrentFile=f;window.ssOnNewFile&&window.ssOnNewFile();video.src=objectUrl;video.style.display='block';$('placeholder').style.display='none';status('Yuklanmoqda: '+f.name);video.onloadedmetadata=()=>{$('start').value=0;$('end').value=video.duration.toFixed(1);status('Tayyor: '+f.name+' · '+video.duration.toFixed(1)+' soniya')};video.onerror=()=>status('Video brauzerda ochilmadi. Boshqa MP4 faylni sinang.')};$('play').onclick=()=>{if(!video.src)return status('Avval video yuklang.');clearTimer();video.play().catch(()=>status('Videoni ijro etib bo‘lmadi.'))};$('pause').onclick=()=>{clearTimer();video.pause()};$('markStart').onclick=()=>{if(!video.src)return status('Avval video yuklang.');$('start').value=video.currentTime.toFixed(1);status('Boshlanish belgilandi.')};$('markEnd').onclick=()=>{if(!video.src)return status('Avval video yuklang.');$('end').value=video.currentTime.toFixed(1);status('Tugash belgilandi.')};$('previewTrim').onclick=async()=>{const range=valid();if(!range)return;clearTimer();const [a,b]=range;video.pause();video.currentTime=a;try{await video.play();trimTimer=setInterval(()=>{if(video.currentTime>=b||video.ended){video.pause();clearTimer();status('Tanlangan bo‘lak ko‘rib chiqildi.')}},70);status('Montaj bo‘lagi ijro etilmoqda: '+a.toFixed(1)+'–'+b.toFixed(1)+' s')}catch{status('Video ijrosini boshlashda xatolik.')}};window.addEventListener('beforeunload',()=>{clearTimer();if(objectUrl)URL.revokeObjectURL(objectUrl)});
+$('upload').onclick=()=>$('file').click();$('file').onchange=e=>{const f=e.target.files[0];if(!f)return;clearTimer();video.pause();if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=URL.createObjectURL(f);window.ssCurrentFile=f;window.ssOnNewFile&&window.ssOnNewFile();video.src=objectUrl;video.style.display='block';$('placeholder').style.display='none';status('Yuklanmoqda: '+f.name);video.onloadedmetadata=()=>{$('start').value=0;$('end').value=video.duration.toFixed(1);status('Tayyor: '+f.name+' · '+video.duration.toFixed(1)+' soniya');window.ssOnMeta&&window.ssOnMeta()};video.onerror=()=>status('Video brauzerda ochilmadi. Boshqa MP4 faylni sinang.')};$('play').onclick=()=>{if(!video.src)return status('Avval video yuklang.');clearTimer();video.play().catch(()=>status('Videoni ijro etib bo‘lmadi.'))};$('pause').onclick=()=>{clearTimer();video.pause()};$('markStart').onclick=()=>{if(!video.src)return status('Avval video yuklang.');$('start').value=video.currentTime.toFixed(1);status('Boshlanish belgilandi.')};$('markEnd').onclick=()=>{if(!video.src)return status('Avval video yuklang.');$('end').value=video.currentTime.toFixed(1);status('Tugash belgilandi.')};$('previewTrim').onclick=async()=>{const range=valid();if(!range)return;clearTimer();const [a,b]=range;video.pause();video.currentTime=a;try{await video.play();trimTimer=setInterval(()=>{if(video.currentTime>=b||video.ended){video.pause();clearTimer();status('Tanlangan bo‘lak ko‘rib chiqildi.')}},70);status('Montaj bo‘lagi ijro etilmoqda: '+a.toFixed(1)+'–'+b.toFixed(1)+' s')}catch{status('Video ijrosini boshlashda xatolik.')}};window.addEventListener('beforeunload',()=>{clearTimer();if(objectUrl)URL.revokeObjectURL(objectUrl)});
 </script>
 <script>
-/* ===== MP4 EKSPORT (haqiqiy) =====
+/* ===== MONTAJ DVIGATELI (haqiqiy) =====
    ffmpeg.wasm brauzerning o'zida ishlaydi: video serverga yuborilmaydi.
-   Bitta oqimli (single-thread) yadro ishlatiladi — GitHub Pages'da
-   maxsus server sarlavhalari (COOP/COEP) talab qilinmaydi. */
+   Bitta oqimli (single-thread) yadro — GitHub Pages'da maxsus server sarlavhalari kerak emas.
+   1) MP4 eksport: tanlangan bo'lakni kesish.
+   2) Avto montaj: ovozdagi pauzalarni topish (silencedetect) va pauzasiz video yig'ish. */
 (()=>{
   const FF_VER='0.12.15', CORE_VER='0.12.10';
   const CDN=(window.SS_FFMPEG_CDN||'https://cdn.jsdelivr.net/npm').replace(/\/$/,'');
-  const MAX_FILE_MB=400, WARN_CLIP_S=180;
-  const exportBtn=$('exportBtn'), cancelBtn=$('cancelExport'), wrap=$('expProgress'), bar=$('expBar'), msg=$('expStatus');
-  const result=$('expResult'), resVideo=$('resultVideo'), dl=$('downloadLink'), info=$('resultInfo');
-  let ff=null, ffLoading=null, busy=false, run=0, resultUrl=null, clipDur=0, logs=[];
+  const MAX_FILE_MB=400, WARN_CLIP_S=180, MAX_SEGMENTS=150;
+  const ENC=['-c:v','libx264','-preset','ultrafast','-crf','23','-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-movflags','+faststart'];
+  const EVEN='scale=trunc(iw/2)*2:trunc(ih/2)*2';
 
-  const say=(text,err)=>{msg.textContent=text;msg.classList.toggle('err',!!err)};
-  const progress=(p,text)=>{wrap.hidden=false;bar.style.width=Math.max(0,Math.min(100,p))+'%';say(text)};
+  /* ---------- umumiy yordamchilar ---------- */
   const mb=n=>(n/1048576).toFixed(1)+' MB';
-  const clearResult=()=>{result.hidden=true;resVideo.removeAttribute('src');resVideo.load();if(resultUrl){URL.revokeObjectURL(resultUrl);resultUrl=null}};
-  window.ssOnNewFile=()=>{if(!busy){clearResult();wrap.hidden=true;say('')}};
+  const fmt=s=>{s=Math.max(0,s);const m=Math.floor(s/60),r=s-m*60;return String(m).padStart(2,'0')+':'+r.toFixed(1).padStart(4,'0')};
+  const err=(stage,msg)=>Object.assign(new Error(msg||stage),{stage});
+  function ui(p){return{wrap:$(p+'Progress'),bar:$(p+'Bar'),msg:$(p+'Status'),result:$(p+'Result'),video:$(p+'Video'),link:$(p+'Link'),info:$(p+'Info'),url:null}}
+  const U={exp:{wrap:$('expProgress'),bar:$('expBar'),msg:$('expStatus'),result:$('expResult'),video:$('resultVideo'),link:$('downloadLink'),info:$('resultInfo'),url:null},auto:ui('auto')};
+  const say=(u,t,bad)=>{u.msg.textContent=t;u.msg.classList.toggle('err',!!bad)};
+  const progress=(u,p,t)=>{u.wrap.hidden=false;u.bar.style.width=Math.max(0,Math.min(100,p))+'%';say(u,t)};
+  function clearResult(u){u.result.hidden=true;u.video.removeAttribute('src');u.video.load();if(u.url){URL.revokeObjectURL(u.url);u.url=null}}
+  function showResult(u,data,name,text){
+    const blob=new Blob([data],{type:'video/mp4'});u.url=URL.createObjectURL(blob);
+    u.video.src=u.url;u.link.href=u.url;u.link.download=name;u.info.textContent=name+' · '+text+' · '+mb(blob.size);
+    u.result.hidden=false;progress(u,100,'Tayyor! “Faylni saqlash” tugmasini bosing.');
+  }
 
+  /* ---------- dvigatel ---------- */
+  let ff=null, ffLoading=null, inFile=null, inName=null, busy=false, run=0, curUI=null, logSink=null, clipDur=0, pBase=20, pSpan=78, pLabel='';
+  function onLog(line){
+    if(logSink) logSink.push(line);
+    const t=/time=\s*(\d+):(\d+):(\d+(?:\.\d+)?)/.exec(line);
+    if(t&&clipDur>0&&curUI){const s=(+t[1])*3600+(+t[2])*60+(+t[3]);const p=Math.min(1,s/clipDur);progress(curUI,pBase+p*pSpan,pLabel+' '+Math.round(p*100)+'%')}
+  }
   async function blobURL(url,type,onPct){
-    const res=await fetch(url);
-    if(!res.ok) throw new Error('HTTP '+res.status+' '+url);
+    const res=await fetch(url); if(!res.ok) throw new Error('HTTP '+res.status+' '+url);
     const total=Number(res.headers.get('content-length'))||0;
     if(!onPct||!res.body||!total) return URL.createObjectURL(new Blob([await res.arrayBuffer()],{type}));
-    const reader=res.body.getReader(), parts=[]; let got=0;
+    const reader=res.body.getReader(),parts=[];let got=0;
     for(;;){const {done,value}=await reader.read();if(done)break;parts.push(value);got+=value.length;onPct(Math.min(99,Math.round(got/total*100)))}
     return URL.createObjectURL(new Blob(parts,{type}));
   }
-
-  function onLog(line){
-    logs.push(line); if(logs.length>40) logs.shift();
-    const t=/time=\s*(\d+):(\d+):(\d+(?:\.\d+)?)/.exec(line);
-    if(t&&clipDur>0){const s=(+t[1])*3600+(+t[2])*60+(+t[3]);const p=Math.min(1,s/clipDur);progress(20+p*78,'MP4 tayyorlanmoqda… '+Math.round(p*100)+'%')}
-  }
-
-  async function loadFF(){
+  async function loadFF(u){
     if(ff) return ff;
-    if(ffLoading) return ffLoading;
-    ffLoading=(async()=>{
-      if(typeof Worker==='undefined'||typeof WebAssembly==='undefined') throw Object.assign(new Error('unsupported'),{stage:'support'});
-      progress(2,'Montaj dvigateli yuklanmoqda… (faqat birinchi marta, ~30 MB)');
-      const base=CDN+'/@ffmpeg/ffmpeg@'+FF_VER+'/dist/esm';
-      const coreBase=CDN+'/@ffmpeg/core@'+CORE_VER+'/dist/esm';
+    if(!ffLoading) ffLoading=(async()=>{
+      if(typeof Worker==='undefined'||typeof WebAssembly==='undefined') throw err('support');
+      progress(u,2,'Montaj dvigateli yuklanmoqda… (faqat birinchi marta, ~30 MB)');
+      const base=CDN+'/@ffmpeg/ffmpeg@'+FF_VER+'/dist/esm', coreBase=CDN+'/@ffmpeg/core@'+CORE_VER+'/dist/esm';
       const {FFmpeg}=await import(base+'/index.js');
-      // Worker CDN'dan to'g'ridan ochilmaydi (boshqa domen) — shuning uchun
-      // o'z domenimizdagi kichik "blob" worker CDN'dagi worker.js'ni import qiladi.
+      // Worker CDN'dan to'g'ridan ochilmaydi (boshqa domen) — o'z domenimizdagi kichik blob-worker uni import qiladi.
       const classWorkerURL=URL.createObjectURL(new Blob(['import "'+base+'/worker.js";'],{type:'text/javascript'}));
       const coreURL=await blobURL(coreBase+'/ffmpeg-core.js','text/javascript');
-      const wasmURL=await blobURL(coreBase+'/ffmpeg-core.wasm','application/wasm',p=>progress(2+p*0.18,'Montaj dvigateli yuklanmoqda… '+p+'%'));
-      const inst=new FFmpeg();
-      inst.on('log',({message})=>onLog(message));
+      const wasmURL=await blobURL(coreBase+'/ffmpeg-core.wasm','application/wasm',p=>progress(curUI||u,2+p*0.16,'Montaj dvigateli yuklanmoqda… '+p+'%'));
+      const inst=new FFmpeg(); inst.on('log',({message})=>onLog(message));
       await inst.load({coreURL,wasmURL,classWorkerURL});
-      ff=inst; return inst;
+      ff=inst; inFile=null; return inst;
     })();
     try{return await ffLoading}catch(e){e.stage=e.stage||'load';throw e}finally{ffLoading=null}
   }
-
-  function reset(){try{ff&&ff.terminate()}catch{} ff=null}
-
-  exportBtn.onclick=async()=>{
-    if(busy) return;
-    const file=window.ssCurrentFile;
-    if(!file){status('Avval video yuklang.');return}
-    const range=valid(); if(!range) return;
-    const [a,b]=range, d=b-a;
-    if(file.size>MAX_FILE_MB*1048576){say('Fayl juda katta ('+mb(file.size)+'). Brauzer versiyasi '+MAX_FILE_MB+' MB gacha ishlaydi; kattaroq fayllar server versiyasida (keyingi bosqich).',true);wrap.hidden=true;return}
-    if(d>WARN_CLIP_S&&!confirm('Bo‘lak '+Math.round(d)+' soniya. Brauzerda uzun eksport sekin bo‘lishi va telefonda xotira yetmasligi mumkin. Davom etamizmi?')) return;
-
-    const my=++run; busy=true; exportBtn.disabled=true; cancelBtn.hidden=false; clearResult(); clipDur=d; logs=[];
-    video.pause(); clearTimer();
+  async function ensureInput(f,file,u){
+    if(inFile===file) return inName;
+    if(inName){try{await f.deleteFile(inName)}catch{}}
+    inFile=null;
+    progress(u,18,'Video dvigatelga uzatilmoqda…');
     const ext=((file.name.match(/\.[a-z0-9]{2,5}$/i)||['.mp4'])[0]).toLowerCase();
-    const inName='input'+ext, outName='output.mp4';
+    inName='input'+ext;
+    await f.writeFile(inName,new Uint8Array(await file.arrayBuffer()));
+    inFile=file; return inName;
+  }
+  async function exec(f,args,{dur,base,span,label,collect}={}){
+    clipDur=dur||0;pBase=base??20;pSpan=span??78;pLabel=label||'Ishlanmoqda…';logSink=collect||null;
+    try{return await f.exec(args)}finally{logSink=null}
+  }
+  function reset(){try{ff&&ff.terminate()}catch{} ff=null;inFile=null}
+
+  /* Har bir ish shu orqali: bitta vaqtda bitta ish, bekor qilish, aniq xatolar */
+  async function job(u,btns,cancelBtn,work){
+    if(busy){say(u,'Boshqa ish bajarilmoqda — tugashini kuting yoki bekor qiling.',true);return}
+    const file=window.ssCurrentFile; if(!file){status('Avval video yuklang.');return}
+    if(file.size>MAX_FILE_MB*1048576){u.wrap.hidden=true;say(u,'Fayl juda katta ('+mb(file.size)+'). Brauzer versiyasi '+MAX_FILE_MB+' MB gacha ishlaydi; kattaroq fayllar server versiyasida (keyingi bosqich).',true);return}
+    const my=++run; busy=true; curUI=u; btns.forEach(b=>b.disabled=true); cancelBtn.hidden=false; cancelBtn.onclick=()=>{run++;reset();finish();u.wrap.hidden=true;say(u,'Bekor qilindi.')};
+    video.pause(); clearTimer(); stopSkipPreview();
+    function finish(){busy=false;curUI=null;btns.forEach(b=>b.disabled=false);cancelBtn.hidden=true;refreshAutoButtons()}
     let stage='load';
     try{
-      const f=await loadFF();
-      stage='write'; progress(20,'Video dvigatelga uzatilmoqda…');
-      await f.writeFile(inName,new Uint8Array(await file.arrayBuffer()));
-      stage='exec'; progress(20,'MP4 tayyorlanmoqda… 0%');
-      const code=await f.exec(['-ss',a.toFixed(3),'-i',inName,'-t',d.toFixed(3),
-        '-map','0:v:0','-map','0:a:0?',
-        '-vf','scale=trunc(iw/2)*2:trunc(ih/2)*2',
-        '-c:v','libx264','-preset','ultrafast','-crf','23','-pix_fmt','yuv420p',
-        '-c:a','aac','-b:a','128k','-movflags','+faststart','-y',outName]);
-      if(code!==0) throw Object.assign(new Error('ffmpeg exit '+code),{stage:'exec'});
-      stage='read';
-      const data=await f.readFile(outName);
-      try{await f.deleteFile(inName);await f.deleteFile(outName)}catch{}
-      if(my!==run) return;
-      if(!data||!data.length) throw Object.assign(new Error('empty output'),{stage:'exec'});
-      const blob=new Blob([data],{type:'video/mp4'});
-      resultUrl=URL.createObjectURL(blob);
-      const name='sherzod-studio_'+a.toFixed(1)+'-'+b.toFixed(1)+'s.mp4';
-      resVideo.src=resultUrl; dl.href=resultUrl; dl.download=name;
-      info.textContent=name+' · '+d.toFixed(1)+' soniya · '+mb(blob.size);
-      result.hidden=false; progress(100,'Tayyor! “Faylni saqlash” tugmasini bosing.');
+      const f=await loadFF(u); stage='write';
+      const name=await ensureInput(f,file,u); stage='exec';
+      await work(f,name,()=>my!==run);
     }catch(e){
-      if(my!==run) return;           // bekor qilingan
-      console.error('[MP4 eksport]',stage,e,logs.join('\n'));
+      if(my!==run) return;
       const st=e.stage||stage, text=String(e&&e.message||e);
-      reset(); wrap.hidden=true;
-      if(st==='support') say('Bu brauzer MP4 eksportni qo‘llab-quvvatlamaydi. Chrome yoki Safari’ning yangi versiyasida oching.',true);
-      else if(st==='load') say('Montaj dvigatelini yuklab bo‘lmadi. Internetni tekshirib, qayta urinib ko‘ring.',true);
-      else if(/memory|RangeError|allocation|OOM/i.test(text)) say('Qurilma xotirasi yetmadi. Qisqaroq bo‘lak tanlang yoki kompyuterda urinib ko‘ring.',true);
-      else say('Videoni MP4 ga aylantirib bo‘lmadi. Fayl formati qo‘llab-quvvatlanmasligi mumkin — boshqa video bilan sinang.',true);
-    }finally{
-      if(my===run){busy=false;exportBtn.disabled=false;cancelBtn.hidden=true}
+      console.error('[Montaj]',st,e);
+      reset(); u.wrap.hidden=true;
+      if(st==='support') say(u,'Bu brauzer montajni qo‘llab-quvvatlamaydi. Chrome yoki Safari’ning yangi versiyasida oching.',true);
+      else if(st==='load') say(u,'Montaj dvigatelini yuklab bo‘lmadi. Internetni tekshirib, qayta urinib ko‘ring.',true);
+      else if(st==='noaudio') say(u,'Bu videoda ovoz yo‘lagi yo‘q — pauzalarni ovoz bo‘yicha topib bo‘lmaydi.',true);
+      else if(st==='nothing') say(u,text,true);
+      else if(/memory|RangeError|allocation|OOM/i.test(text)) say(u,'Qurilma xotirasi yetmadi. Qisqaroq oraliq tanlang yoki kompyuterda urinib ko‘ring.',true);
+      else say(u,'Videoni qayta ishlab bo‘lmadi. Fayl formati qo‘llab-quvvatlanmasligi mumkin — boshqa video bilan sinang.',true);
+    }finally{ if(my===run) finish() }
+  }
+
+  /* ---------- haqiqiy timeline ---------- */
+  let segs=null, segRange=null;
+  function renderTimeline(){
+    const d=video.duration; if(!Number.isFinite(d)||d<=0) return;
+    const r=$('ruler'); r.innerHTML=''; for(let i=0;i<=4;i++){const s=document.createElement('span');s.textContent=fmt(d*i/4).replace(/\.\d$/,'');r.appendChild(s)}
+    for(const bar of [$('vBar'),$('aBar')]){
+      bar.classList.add('real'); bar.innerHTML='';
+      const add=(cls,a,b)=>{const el=document.createElement('div');el.className=cls;el.style.left=(a/d*100)+'%';el.style.width=Math.max(.15,(b-a)/d*100)+'%';bar.appendChild(el)};
+      if(segs&&segRange){
+        add('seg',0,segRange[0]); let cur=segRange[0];
+        for(const [a,b] of segs){ if(a>cur) add('cut',cur,a); add('seg',a,b); cur=b }
+        if(segRange[1]>cur) add('cut',cur,segRange[1]); if(d>segRange[1]) add('seg',segRange[1],d);
+      } else add('seg',0,d);
     }
+  }
+
+  /* ---------- 1) MP4 eksport (tanlangan bo'lak) ---------- */
+  const exportBtn=$('exportBtn'), cancelExp=$('cancelExport');
+  exportBtn.onclick=async()=>{
+    const range=valid(); if(!range) return; const [a,b]=range, d=b-a;
+    if(d>WARN_CLIP_S&&!confirm('Bo‘lak '+Math.round(d)+' soniya. Brauzerda uzun eksport sekin bo‘lishi va telefonda xotira yetmasligi mumkin. Davom etamizmi?')) return;
+    clearResult(U.exp);
+    await job(U.exp,[exportBtn,$('autoFind'),$('autoExport')],cancelExp,async(f,name,cancelled)=>{
+      progress(U.exp,20,'MP4 tayyorlanmoqda… 0%');
+      const code=await exec(f,['-ss',a.toFixed(3),'-i',name,'-t',d.toFixed(3),'-map','0:v:0','-map','0:a:0?','-vf',EVEN,...ENC,'-y','output.mp4'],{dur:d,label:'MP4 tayyorlanmoqda…'});
+      if(code!==0) throw err('exec','ffmpeg exit '+code);
+      const data=await f.readFile('output.mp4'); try{await f.deleteFile('output.mp4')}catch{}
+      if(cancelled()) return; if(!data||!data.length) throw err('exec','empty');
+      showResult(U.exp,data,'sherzod-studio_'+a.toFixed(1)+'-'+b.toFixed(1)+'s.mp4',d.toFixed(1)+' soniya');
+    });
   };
 
-  cancelBtn.onclick=()=>{
-    if(!busy) return;
-    run++; reset(); busy=false; exportBtn.disabled=false; cancelBtn.hidden=true; wrap.hidden=true;
-    say('Eksport bekor qilindi.');
+  /* ---------- 2) Avto montaj: pauzalarni topish ---------- */
+  const autoFind=$('autoFind'), autoPrev=$('autoPreview'), autoExp=$('autoExport'), autoCancel=$('autoCancel'), autoSum=$('autoSum');
+  function refreshAutoButtons(){const ok=!!(segs&&segs.length);autoPrev.disabled=!ok||busy;autoExp.disabled=!ok||busy}
+  function parseSilences(lines,offset,dur){
+    const out=[];let open=null;
+    for(const l of lines){
+      let m=/silence_start:\s*(-?[\d.]+)/.exec(l); if(m){open=Math.max(0,+m[1]);continue}
+      m=/silence_end:\s*([\d.]+)/.exec(l); if(m&&open!==null){out.push([open+offset,Math.min(dur,+m[1])+offset]);open=null}
+    }
+    if(open!==null) out.push([open+offset,dur+offset]);
+    return out;
+  }
+  // Pauzalardan "saqlanadigan" bo'laklarni hisoblash. pad — gap boshi/oxiri kesilib ketmasligi uchun.
+  function keepSegments(sil,a,b,pad=0.12,minKeep=0.2){
+    const out=[];let cur=a;
+    for(const [s,e] of sil){
+      const cs=s<=a+0.01?a:Math.max(a,s+pad), ce=e>=b-0.01?b:Math.min(b,e-pad);
+      if(ce-cs<0.05) continue;
+      if(cs>cur) out.push([cur,cs]); cur=Math.max(cur,ce);
+    }
+    if(b>cur) out.push([cur,b]);
+    return out.filter(([x,y])=>y-x>=minKeep);
+  }
+  window.ssKeepSegments=keepSegments; // test uchun
+  autoFind.onclick=async()=>{
+    const range=valid(); if(!range) return; const [a,b]=range, d=b-a;
+    const minSil=$('autoMode').value, noise=$('autoNoise').value;
+    clearResult(U.auto); autoSum.hidden=true; segs=null; segRange=null; renderTimeline(); refreshAutoButtons();
+    await job(U.auto,[autoFind,exportBtn,autoExp,autoPrev],autoCancel,async(f,name,cancelled)=>{
+      progress(U.auto,20,'Ovoz tahlil qilinmoqda… 0%');
+      const lines=[];
+      const code=await exec(f,['-ss',a.toFixed(3),'-t',d.toFixed(3),'-i',name,'-vn','-af','silencedetect=noise='+noise+'dB:d='+minSil,'-f','null','-'],{dur:d,label:'Ovoz tahlil qilinmoqda…',collect:lines});
+      if(cancelled()) return;
+      if(!lines.some(l=>/Stream #\d+:\d+.*Audio/.test(l))) throw err('noaudio');
+      if(code!==0) throw err('exec','ffmpeg exit '+code);
+      const sil=parseSilences(lines,a,d);
+      let k=keepSegments(sil,a,b);
+      if(!k.length) throw err('nothing','Bu oraliqda nutq topilmadi — hammasi jim. “Jimlik chegarasi”ni “Juda jim xona” qilib ko‘ring.');
+      if(k.length>MAX_SEGMENTS) throw err('nothing','Juda ko‘p pauza topildi ('+k.length+' bo‘lak). “Yumshoq” darajani tanlang yoki oraliqni qisqartiring.');
+      segs=k; segRange=[a,b]; renderTimeline();
+      const kept=k.reduce((s,[x,y])=>s+y-x,0), cuts=sil.filter(([s,e])=>e-s>=+minSil).length;
+      autoSum.innerHTML='<div>Topilgan pauzalar<b>'+cuts+' ta</b></div><div>Davomiylik<b>'+fmt(d)+' → '+fmt(kept)+'</b></div><div>Qisqardi<b>'+(d-kept).toFixed(1)+' s ('+Math.round((d-kept)/d*100)+'%)</b></div><div>Bo‘laklar<b>'+k.length+' ta</b></div>';
+      autoSum.hidden=false;
+      progress(U.auto,100,cuts?'Tayyor. Timeline’da kesiladigan joylar chiziqli bo‘lib ko‘rinadi. “Natijani ko‘rish” yoki “Pauzasiz MP4” ni bosing.':'Bu oraliqda kesishga arziydigan pauza topilmadi.');
+    });
   };
+
+  /* Natijani oldindan ko'rish: kesilgan joylardan sakrab o'tadi */
+  let skipRAF=null;
+  function stopSkipPreview(){if(skipRAF){cancelAnimationFrame(skipRAF);skipRAF=null}}
+  autoPrev.onclick=async()=>{
+    if(!segs||busy) return; stopSkipPreview(); clearTimer();
+    let i=0; video.currentTime=segs[0][0];
+    try{await video.play()}catch{say(U.auto,'Videoni ijro etib bo‘lmadi.',true);return}
+    say(U.auto,'Pauzasiz variant ijro etilmoqda…');
+    const tick=()=>{
+      if(video.paused){stopSkipPreview();return}
+      const t=video.currentTime;
+      while(i<segs.length&&t>=segs[i][1]-0.02) i++;
+      if(i>=segs.length){video.pause();stopSkipPreview();say(U.auto,'Ko‘rib chiqildi.');return}
+      if(t<segs[i][0]-0.05) video.currentTime=segs[i][0];
+      skipRAF=requestAnimationFrame(tick);
+    };
+    skipRAF=requestAnimationFrame(tick);
+  };
+
+  /* Pauzasiz MP4: har bir bo'lak alohida kirish sifatida ochiladi va concat bilan ulanadi
+     (xotira tejamkor, ovoz-tasvir sinxron) */
+  autoExp.onclick=async()=>{
+    if(!segs||!segs.length) return;
+    const list=segs.slice(), total=list.reduce((s,[x,y])=>s+y-x,0);
+    if(total>WARN_CLIP_S&&!confirm('Natija '+Math.round(total)+' soniya. Brauzerda uzun eksport sekin bo‘lishi mumkin. Davom etamizmi?')) return;
+    clearResult(U.auto);
+    await job(U.auto,[autoFind,exportBtn,autoExp,autoPrev],autoCancel,async(f,name,cancelled)=>{
+      progress(U.auto,20,'Pauzasiz MP4 tayyorlanmoqda… 0%');
+      const args=[]; let fc='', cat='';
+      list.forEach(([x,y],i)=>{args.push('-ss',x.toFixed(3),'-t',(y-x).toFixed(3),'-i',name);cat+='['+i+':v:0]['+i+':a:0]'});
+      fc=cat+'concat=n='+list.length+':v=1:a=1[vc][ac];[vc]'+EVEN+',format=yuv420p[vo]';
+      const code=await exec(f,[...args,'-filter_complex',fc,'-map','[vo]','-map','[ac]',...ENC,'-y','auto.mp4'],{dur:total,label:'Pauzasiz MP4 tayyorlanmoqda…'});
+      if(code!==0) throw err('exec','ffmpeg exit '+code);
+      const data=await f.readFile('auto.mp4'); try{await f.deleteFile('auto.mp4')}catch{}
+      if(cancelled()) return; if(!data||!data.length) throw err('exec','empty');
+      showResult(U.auto,data,'sherzod-studio_avto-montaj.mp4',total.toFixed(1)+' soniya ('+list.length+' bo‘lak)');
+    });
+  };
+
+  /* ---------- yangi video ---------- */
+  window.ssOnNewFile=()=>{ if(busy) return; segs=null; segRange=null; autoSum.hidden=true; refreshAutoButtons(); stopSkipPreview();
+    for(const u of [U.exp,U.auto]){clearResult(u);u.wrap.hidden=true;say(u,'')} };
+  window.ssOnMeta=()=>renderTimeline();
 })();
 </script>
 </body>
